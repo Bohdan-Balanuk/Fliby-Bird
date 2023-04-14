@@ -1,11 +1,9 @@
 from pygame import*
 from random import randint
+from menu_dino_pong import*
+from main_menu import ending
 import sys
 
-
-
-
-#класи й обєкти
 init()
 clock = time.Clock()
 
@@ -81,6 +79,8 @@ def finish(window, finish_image, gameover, counter = 0):
         counter += 1
         clock.tick(120)
 
+choose = Dino_Pong_Menu()
+
 pl1 = 0
 pl2 = 0
 player1_goals = 0
@@ -95,7 +95,6 @@ text = GameCard(520, 50, 100, 100, (255, 0, 255))
 text.set_text(":")
 
 player2_stats = GameCard(620, 50, 100, 100, (0, 255, 255))
-print(choose)
 
 if choose == 1:
     ball_speedx = 3

@@ -4,6 +4,7 @@ from random import randint
 from classes_objects_and_menu_dino_pong import* 
 import sys
 
+   
 init()
 clock = time.Clock()
 

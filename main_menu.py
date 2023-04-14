@@ -3,7 +3,11 @@ from random import*
 from time import*
 from PyQt5.QtCore import*
 from PyQt5.QtWidgets import*
-from menu_dino_pong import*
+from dino_game import*
+from dogonalki import*
+from fliby_bird import*
+from labirint_game import*
+
 
 
 app = QApplication([])
@@ -39,7 +43,7 @@ def open_first_game():
     qm = QMessageBox()
     ok = qm.question(qm, "deket?", "Ви точно хочете цю гру?", qm.Yes | qm.No)
     if ok == qm.Yes:
-        import fliby_bird
+        Fliby_bird_game()
         main_window.close()
 
 
@@ -47,7 +51,7 @@ def open_second_game():
     qm = QMessageBox()
     ok = qm.question(qm, "deket?", "Ви точно хочете цю гру?", qm.Yes | qm.No)
     if ok == qm.Yes:
-        import dino_game
+        Dino_game()
         main_window.close()
 
 
@@ -55,7 +59,7 @@ def open_third_game():
     qm = QMessageBox()
     ok = qm.question(qm, "deket?", "Ви точно хочете цю гру?", qm.Yes | qm.No)
     if ok == qm.Yes:
-        import dogonalki
+        Dogonalki_game()
         main_window.close()
 
 
@@ -63,7 +67,7 @@ def open_fourth_game():
     qm = QMessageBox()
     ok = qm.question(qm, "deket?", "Ви точно хочете цю гру?", qm.Yes | qm.No)
     if ok == qm.Yes:
-        import labirint_game
+        Labirint_game()
         main_window.close()
 
 
@@ -72,14 +76,15 @@ def open_five_game():
     ok = qm.question(qm, "deket?", "Ви точно хочете цю гру?", qm.Yes | qm.No)
     if ok == qm.Yes:
         main_window.close()
-        main_wind.show()
         import dino_pong_game
+        
         
 button_first_game.clicked.connect(open_first_game)
 button_second_game.clicked.connect(open_second_game)
 button_third_game.clicked.connect(open_third_game)
 button_fourth_game.clicked.connect(open_fourth_game)
-button_five_game.clicked.connect(open_five_game)
+if button_five_game.clicked.connect(open_five_game):
+    ending = 1
 
 main_window.setLayout(main_layout)
 main_window.show()
