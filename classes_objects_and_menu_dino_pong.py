@@ -1,7 +1,6 @@
 from pygame import*
 from random import randint
 from menu_dino_pong import*
-from main_menu import ending
 import sys
 
 init()
@@ -79,7 +78,6 @@ def finish(window, finish_image, gameover, counter = 0):
         counter += 1
         clock.tick(120)
 
-choose = Dino_Pong_Menu()
 
 pl1 = 0
 pl2 = 0
